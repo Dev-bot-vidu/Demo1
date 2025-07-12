@@ -1,0 +1,165 @@
+.footer-section {
+  background-color: #b07473;
+  color: black;
+}
+
+/* Grid Layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 20px;
+  border-bottom: 2px solid #293241;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.ft-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.ft-sign {
+  color: black;
+  font-weight: bold;
+}
+
+.ft-description {
+  font-size: 14px;
+  margin: 12px 0 24px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* List Section */
+.ft-list-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  /* color: red; */
+}
+
+.ft-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ft-list-items li {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.ft-list-items li a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px dotted transparent;
+  transition: border 0.2s ease;
+}
+
+.ft-list-items li a:hover {
+  border-bottom: 2px dotted black;
+}
+
+/* Footer Bottom Section */
+.ft-bottom {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.ft-social-links {
+  display: flex;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.ft-social-links li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid black;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.ft-social-links li a:hover {
+  border-color: #041b9b;
+  color: #041b9b;
+}
+
+/* Responsive Grid */
+@media (min-width: 481px) {
+  .footer-container {
+    grid-template-columns: 2fr repeat(1, 1fr);
+  }
+
+  .ft-title {
+    font-size: 28px;
+  }
+
+  .ft-description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer-container {
+    grid-template-columns: 2fr repeat(3, 1fr);
+    padding: 32px;
+  }
+
+  .ft-title {
+    font-size: 32px;
+  }
+
+  .ft-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 32px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .footer-container {
+    grid-template-columns: 2fr repeat(3, 1fr);
+  }
+
+  .ft-title {
+    font-size: 36px;
+  }
+  .ft-description{
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+
+  .ft-bottom{
+    font-size: 18px;
+  }
+  .ft-list-title {
+    font-size: 22px;
+  }
+
+  .ft-list-items li {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .ft-social-links li a {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,178 @@
+.hero-wrapper {
+  position: relative;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 30px auto;
+  width: 90%;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 60px;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.left-aligned {
+  text-align: left;
+}
+
+.head {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 34px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #8b5050;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: black;
+}
+
+/* Scroll Up Button */
+.scroll-up {
+  width: 45px;
+  height: 45px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  background-color: #8b5050;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 24px;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.show-scroll {
+  display: flex;
+}
+
+/* ===================== Responsive ===================== */
+
+/* Small Devices (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .hero-wrapper {
+    padding: 20px;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .head {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .scroll-up {
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Medium Devices (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .hero-wrapper {
+    padding: 30px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 26px;
+  }
+
+  .description,
+  .head {
+    font-size: 16px;
+  }
+}
+
+/* Large Devices (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-wrapper {
+    padding: 50px 80px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+}
+
+/* Extra Large Devices (≥ 1025px) */
+@media screen and (min-width: 1025px) {
+  .hero-wrapper {
+    padding-left: 100px;
+  }
+
+  .subtitle {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}

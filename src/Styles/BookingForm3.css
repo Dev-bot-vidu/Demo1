@@ -1,0 +1,262 @@
+/* BookingForm3.css */
+
+/* General container */
+.booking-form3-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: #f9fbfc;
+  border-radius: 8px;
+}
+
+/* Section layout */
+.section {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.section p {
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Flex groups */
+.select-group,
+.input-group,
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.select-group select,
+.input-group input,
+.input-group select,
+.input-group textarea {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Extras */
+.extra-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.extra-box {
+  background: #f2f2f2;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  flex: 1 1 120px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Button style (selected = blue) */
+.select-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.select-buttons button {
+  flex: 1;
+  padding: 8px 12px;
+  background: #eaeaea;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.select-buttons button.selected {
+  background: #00bfff;
+  color: white;
+  border: 1px solid #00bfff;
+}
+
+/* Date input */
+.date-picker {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  width: 200px;
+}
+
+/* ✅ Checkbox inline fix */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-group .selected {
+  background: #00bfff;
+  color: white;
+}
+
+/* Text area */
+.textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+/* Coupon and Payment */
+.coupon-section {
+  margin-top: 15px;
+}
+
+.coupon-tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.coupon-tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 6px 6px 0 0;
+}
+
+.coupon-tab.active {
+  background: #e5f8ff;
+  border-bottom: 2px solid #00bfff;
+}
+
+.coupon-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.coupon-input-group input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.coupon-input-group button {
+  padding: 10px 20px;
+  background: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment-section {
+  margin-top: 20px;
+}
+
+.card-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Terms checkbox fix */
+.terms-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.terms-section input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.terms-section label {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* Submit button */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #00bfff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .select-group,
+  .input-group,
+  .row,
+  .coupon-input-group {
+    flex-direction: column;
+  }
+
+  .button-group,
+  .select-buttons {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,63 @@
+/* --- Navbar Container --- */
+.navbar1 {
+  position: sticky;
+  top: 120px;
+  width: 30%;
+  margin: 1% auto;
+  padding: 1.2% 2%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+/* Navigation Links */
+.nav-links1 {
+  display: flex !important;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Links Styling */
+.nav-links1 a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links1 a:hover {
+  color: #af7a7a;
+}
+
+/* Remove hamburger menu */
+.menu-toggle1 {
+  display: none !important;
+}
+
+/* Responsive — keep menu always visible */
+@media (max-width: 1024px) {
+    .navbar1 {
+
+  width: 85%;
+ margin: 4% auto;
+}
+  .nav-links1 {
+    /* flex-direction: column; */
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .navbar1 {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,181 @@
+/* BookingForm2.css */
+
+.booking-form2 {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f5f8fc;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.subheading {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button-group-button {
+  padding: 10px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-selected {
+  background-color: #00c4ff;
+  color: white;
+  font-weight: bold;
+}
+
+.area-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.extras-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.extras-section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.note-textarea {
+  margin-top: 8px;
+}
+
+.coupon-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.coupon-section input {
+  flex: 1;
+}
+
+.apply-button {
+  padding: 10px 20px;
+  background-color: #00c4ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.final-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.submit-button {
+  background-color: #00c4ff;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.submit-button:hover {
+  background-color: #00a3d6;
+}
+
+.info-block {
+  margin: 30px 0;
+}
+
+.info-block h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.info-block p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .area-row,
+  .button-group,
+  .coupon-section,
+  .card-input {
+    flex-direction: column;
+  }
+
+  .apply-button,
+  .submit-button {
+    width: 100%;
+  }
+}

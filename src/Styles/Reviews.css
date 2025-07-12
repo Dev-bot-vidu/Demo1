@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #b07473;
+  --secondary-color: black;
+  --text-dark: #0f172a;
+  --text-light: #e5dbce;
+  --white: black;
+}
+
+.testimonial-section {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary-color);
+}
+
+.section__container {
+  max-width: 1800px;
+  margin: auto;
+  padding: 8rem 12rem;
+  text-align: center;
+}
+
+.section__container h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #8b5050;
+  margin-bottom: 10px;
+}
+
+.section__container h1 {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.section__container h1::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  height: 5px;
+  width: 35%;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+}
+
+/* Grid Layout */
+.section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Testimonial Card */
+.section__card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 5rem 2rem 2rem;
+  background-color: #e5dbce;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.section__card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.section__card span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.section__card h4 {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s;
+}
+
+.section__card p {
+  margin-bottom: 2rem;
+  color: black;
+  transition: 0.3s;
+}
+
+.section__card img {
+  margin-bottom: 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.section__card h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s;
+}
+
+.section__card h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  transition: 0.3s;
+}
+
+/* Hover Effects */
+.section__card:hover::before {
+  width: 400%;
+}
+
+.section__card:hover :is(h4, h5) {
+  color: var(--white);
+}
+
+.section__card:hover :is(p, h6) {
+  color: var(--secondary-color);
+}
+
+.section__card:hover img {
+  border-color: var(--white);
+}
+
+/* ================== Responsive Breakpoints ================== */
+
+/* ≤ 1200px (Large laptops) */
+@media screen and (max-width: 1200px) {
+  .section__container {
+    padding: 6rem 6rem;
+  }
+}
+
+/* ≤ 992px (Tablets) */
+@media screen and (max-width: 992px) {
+  .section__container {
+    padding: 4rem 2rem;
+  }
+
+  .section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section__container h1 {
+    font-size: 32px;
+  }
+
+  .section__container h2 {
+    font-size: 24px;
+  }
+}
+
+/* ≤ 768px (Large Mobile) */
+@media screen and (max-width: 768px) {
+  .section__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section__container h1 {
+    font-size: 28px;
+  }
+
+  .section__container h2 {
+    font-size: 22px;
+  }
+
+  .section__card {
+    padding: 4rem 1.5rem 2rem;
+    margin: auto 40px;
+  }
+
+  .section__card span {
+    font-size: 2.5rem;
+  }
+
+  .section__card h4 {
+    font-size: 1.3rem;
+  }
+
+  .section__card h5 {
+    font-size: 1.1rem;
+  }
+
+  .section__card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ≤ 480px (Small Mobile) */
+@media screen and (max-width: 480px) {
+  .section__container {
+    padding: 3rem 1rem;
+  }
+
+  .section__container h1 {
+    font-size: 24px;
+  }
+
+  .section__container h2 {
+    font-size: 20px;
+  }
+
+  .section__card {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .section__card span {
+    font-size: 2rem;
+  }
+
+  .section__card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section__card h4 {
+    font-size: 1.2rem;
+  }
+
+  .section__card h5 {
+    font-size: 1rem;
+  }
+
+  .section__card h6 {
+    font-size: 0.9rem;
+  }
+
+  .section__card p {
+    font-size: 0.9rem;
+  }
+}

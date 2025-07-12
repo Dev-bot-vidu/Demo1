@@ -1,0 +1,252 @@
+/* ========== Base Layout ========== */
+.booking-form .form-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px;
+  width: 85%;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+
+.booking-form .form-wrapper {
+  flex: 1;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form h2 {
+  font-size: 20px;
+  margin: 30px 0 15px;
+  color: #333;
+}
+
+/* ========== Form Elements ========== */
+.booking-form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form textarea,
+.booking-form .custom-select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus,
+.booking-form .custom-select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.booking-form .custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.booking-form .custom-select {
+  appearance: none;
+  background: #fafafa url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='black' d='M2 0L0 2h4z'/></svg>") no-repeat right 12px center;
+  background-size: 10px;
+}
+
+/* ========== Grids ========== */
+.booking-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.booking-form .extras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* ========== Extras ========== */
+.booking-form .extra-box {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.booking-form .extra-box:hover {
+  background: #e8f0fe;
+  border-color: #b07473;
+}
+
+.booking-form .extra-box .icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* ========== Button Groups ========== */
+.booking-form .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.booking-form .button-group button {
+  padding: 10px 18px;
+  font-size: 14px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.booking-form .button-group button.active {
+  background: #b07473;
+  color: #fff;
+  border-color: #994c4b;
+}
+
+.booking-form .button-group button:hover:not(.active) {
+  background: #e6e6e6;
+}
+
+/* ========== Textarea ========== */
+.booking-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ========== Action Buttons ========== */
+.booking-form .apply-btn,
+.booking-form .submit-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background: #b07473;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.booking-form .apply-btn:hover,
+.booking-form .submit-btn:hover {
+  background: #a16260;
+}
+
+.booking-form .submit-btn {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* ========== Payment Card Section ========== */
+.booking-form .card-box {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.booking-form .card-input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.booking-form .card-number {
+  flex: 2;
+  min-width: 200px;
+}
+
+.booking-form .card-exp,
+.booking-form .card-cvc {
+  flex: 1;
+  min-width: 80px;
+}
+
+.booking-form .card-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.booking-form .card-icons img {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+  .booking-form .form-layout {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .booking-form .sidebar-panel {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-form .form-grid,
+  .booking-form .extras-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form .form-layout {
+    padding: 15px;
+  }
+
+  .booking-form .card-input-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-form h2 {
+    font-size: 18px;
+  }
+
+  .booking-form .submit-btn {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+
+  .booking-form .card-icons img {
+    height: 24px;
+  }
+}
